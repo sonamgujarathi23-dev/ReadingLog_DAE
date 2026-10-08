@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Log reading · My Reading Log</title><link rel="stylesheet" href="style.css"></head><body><div class="wrap">
+<h1>📚 My Reading Log</h1>
+<nav><a href="index.html" >📊 Progress</a><a href="log.html" class="on">⏱ Log reading</a><a href="books.php" >📚 My books</a><a href="kids.html" >🧒 Kids' books</a></nav>
+<div class="card"><b>Log a reading session</b>
+<form action="save_session.php" method="post">
+<label for="book_id">Book</label>
+<select id="book_id" name="book_id"><!-- PHP LATER: fill options from the books table -->
+<option value="1">Charlotte's Web</option><option value="2">Wonder</option><option value="3">Matilda</option></select>
+<label for="session_date">Date</label><input id="session_date" name="session_date" type="date" required>
+<label for="minutes_read">Minutes read</label><input id="minutes_read" name="minutes_read" type="number" min="1" required>
+<label for="pages_read">Pages read</label><input id="pages_read" name="pages_read" type="number" min="0" value="0">
+<button type="submit">Save session</button>
+</form></div>
+<h2>Recent sessions</h2>
+<div class="scroll"><table>
+<tr><th>Date</th><th>Book</th><th>Minutes</th><th>Pages</th></tr>
+<!-- PHP LATER: loop over the reading_sessions table -->
+<tr><td>2026-10-06</td><td>Charlotte's Web</td><td>25</td><td>12</td></tr>
+<tr><td>2026-10-05</td><td>Wonder</td><td>30</td><td>18</td></tr>
+<tr><td>2026-10-04</td><td>Charlotte's Web</td><td>15</td><td>8</td></tr>
+</table></div>
+</div></body></html>

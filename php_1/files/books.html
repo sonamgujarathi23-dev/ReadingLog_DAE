@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>My books · My Reading Log</title><link rel="stylesheet" href="style.css"></head><body><div class="wrap">
+<h1>📚 My Reading Log</h1>
+<nav><a href="index.html" >📊 Progress</a><a href="log.html" >⏱ Log reading</a><a href="books.html" class="on">📚 My books</a><a href="kids.html" >🧒 Kids' books</a></nav>
+<div class="card"><b>Add a book</b>
+<form action="add_book.php" method="post">
+<label for="title">Title</label><input id="title" name="title" required>
+<label for="author">Author</label><input id="author" name="author">
+<label for="total_pages">Total pages</label><input id="total_pages" name="total_pages" type="number" min="1" required>
+<label for="pages_read">Pages already read</label><input id="pages_read" name="pages_read" type="number" min="0" value="0">
+<button type="submit">Add book</button>
+</form></div>
+<h2>My library</h2>
+<div class="scroll"><table>
+<tr><th>Title</th><th>Author</th><th>Total pages</th><th>Read</th><th>Left</th><th>Status</th><th>Progress</th></tr>
+<!-- PHP LATER: loop over the books table and print one row per book -->
+<tr><td>Charlotte's Web</td><td>E.B. White</td><td>184</td><td>120</td><td>64</td><td>Reading</td><td><progress value="120" max="184"></progress></td></tr>
+<tr><td>Wonder</td><td>R.J. Palacio</td><td>315</td><td>90</td><td>225</td><td>Reading</td><td><progress value="90" max="315"></progress></td></tr>
+<tr><td>Matilda</td><td>Roald Dahl</td><td>240</td><td>240</td><td>0</td><td class="done">✅ Finished</td><td><progress value="240" max="240"></progress></td></tr>
+</table></div>
+</div></body></html>
